@@ -9,6 +9,13 @@
 
 ---
 
+## 🖼️ Interface – Exemplo
+
+<img width="1914" height="916" alt="image" src="https://github.com/user-attachments/assets/bd57d7e7-1182-455d-9966-a85e1df34a34" />
+
+
+---
+
 ## 📌 Descrição do Projeto
 
 Implementação do clássico jogo **Super Trunfo**, com lógica desenvolvida em **C** e interface visual em **React** utilizando **Vite**.
@@ -35,11 +42,6 @@ Implementação do clássico jogo **Super Trunfo**, com lógica desenvolvida em 
 
 ---
 
-## 🖼️ Interface – Exemplo
-
-![Screenshot](image.png)
-
----
 
 ## 🛠️ Tecnologias
 
