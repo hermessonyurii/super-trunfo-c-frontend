@@ -1,0 +1,158 @@
+/* Aplica a altura total da tela, remove margens e espaçamentos padrão para o body, #root e .App */
+body,
+#root,
+.App {
+  height: 100vh;
+  /* Faz com que a altura ocupe 100% da viewport */
+  margin: 0;
+  /* Remove margens padrão que existem em navegadores */
+  padding: 0;
+  /* Remove espaçamentos internos */
+}
+
+/* Estiliza a div principal da aplicação com flexbox para centralizar o conteúdo */
+.App {
+  min-height: 100vh;
+  /* Altura mínima igual a 100% da tela */
+  min-width: 100vw;
+  /* Largura mínima igual a 100% da tela */
+  width: 100vw;
+  /* A largura sempre será 100% da viewport */
+  height: 100vh;
+  /* A altura será 100% da viewport */
+  display: flex;
+  /* Usa flexbox para layout circular */
+  align-items: center;
+  /* Centraliza verticalmente o conteúdo filho */
+  justify-content: center;
+  /* Centraliza horizontalmente o conteúdo filho */
+  background: url('/background-cidades.png') center center / cover no-repeat;
+  /* Define imagem de fundo cobrindo todo o elemento, centralizada */
+  position: relative;
+  /* Define contexto para elementos posicionados dentro dela */
+}
+
+/* Container principal com fundo branco translúcido e suave para destacar conteúdo */
+.content-bg {
+  background: rgba(255, 255, 255, 0.75);
+  /* Fundo branco transparente para deixar o conteúdo destacado sem esconder o fundo */
+  /* Comentário explicativo: pode ajustar a transparência aumentando ou diminuindo o número 0.75 */
+  border-radius: 28px;
+  /* Bordas arredondadas para um efeito leve e moderno */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.14);
+  /* Sombra suave para dar profundidade */
+  backdrop-filter: blur(2.5px);
+  /* Efeito de desfoque no fundo atrás do container para deixar o texto mais legível */
+}
+
+/* Mais estilos das cartas seguem em outro trecho */
+
+/* Estilização do título principal */
+h1 {
+  font-size: 2.8rem;
+  /* Define o tamanho da fonte grande */
+  font-weight: 900;
+  /* Fonte bem bold (negrito) para dar destaque */
+  color: #05734a;
+  /* Cor verde escura */
+  text-shadow: 0 2px 8px #fff7, 0 1px 2px #bbb8;
+  /* Sombra no texto para dar profundidade e destacar */
+  background: rgba(255, 255, 255, 0.82);
+  /* Fundo branco translúcido para destacar */
+  padding: 16px 32px;
+  /* Espaçamento interno ao redor do texto */
+  border-radius: 16px;
+  /* Bordas arredondadas */
+  margin-bottom: 0;
+  /* Remove espaçamento inferior */
+  display: block;
+  /* Define que o elemento é bloco */
+  text-align: center;
+  /* Centraliza o texto horizontalmente */
+}
+
+/* Container que agrupa as cartas lado a lado */
+.cartas-container {
+  display: flex;
+  /* Usa flexbox para organizar os cards */
+  justify-content: center;
+  /* Centra as cartas horizontalmente */
+  gap: 40px;
+  /* Espaço entre os cartões */
+  flex-wrap: wrap;
+  /* Permite que as cartas pulem para a próxima linha em telas pequenas */
+}
+
+/* Estilo para cada carta individual */
+.carta {
+  background: linear-gradient(135deg, #ffefba 0%, #a8edea 100%);
+  /* Gradiente amarelo para azul claro */
+  color: #454547;
+  /* Cor da fonte cinza escuro */
+  box-shadow: 0 4px 18px rgba(54, 54, 54, 0.19);
+  /* Sombra para destacar a carta da página */
+  padding: 28px 22px 20px 22px;
+  /* Espaçamento interno da carta */
+  border-radius: 15px;
+  /* Bordas arredondadas */
+  width: 270px;
+  /* Largura fixa para as cartas */
+  display: flex;
+  /* Flexbox para arranjar conteúdo */
+  flex-direction: column;
+  /* Organiza o conteúdo verticalmente */
+  align-items: flex-start;
+  /* Alinha o conteúdo para o início (esquerda) */
+  margin-bottom: 10px;
+  /* Espaço abaixo da carta */
+}
+
+/* Cor e estilo para o título dentro da carta */
+.carta h2 {
+  color: #113246;
+  /* Azul escuro para destacar */
+}
+
+/* Cor do texto forte dentro do parágrafo */
+.carta p strong {
+  color: #553087;
+  /* Roxo escuro para realçar */
+}
+
+/* Regras para telas pequenas, como celular */
+@media (max-width: 700px) {
+
+  /* Modifica container das cartas para layout vertical */
+  .cartas-container {
+    flex-direction: column;
+    /* Card fica um abaixo do outro */
+    align-items: center;
+    /* Centraliza as cartas na tela */
+    gap: 30px;
+    /* Espaço entre as cartas menor na vertical */
+  }
+
+  /* Ajustes no fundo para ficar responsivo */
+  .content-bg {
+    background: rgba(255, 255, 255, 0.75);
+    /* Mantém transparência */
+    border-radius: 28px;
+    /* Bordas arredondadas */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.14);
+    /* Sombra suave */
+    backdrop-filter: blur(2.5px);
+    /* Desfoque */
+    padding: 40px 30px;
+    /* Espaçamento interno */
+    max-width: 900px;
+    /* Largura máxima */
+    width: 94vw;
+    /* Ajusta para largura da viewport */
+    display: flex;
+    /* Flexbox */
+    flex-direction: column;
+    /* Coluna */
+    align-items: center;
+    /* Centraliza conteúdo */
+  }
+}

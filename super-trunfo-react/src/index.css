@@ -1,0 +1,125 @@
+/* Definições globais de estilo e fonte para todo o site */
+:root {
+  /* Define fontes do sistema e fontes fallback para melhor compatibilidade */
+  font-family: 'Segoe UI', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  /* Espaçamento entre linhas para leitura confortável */
+  font-weight: 400;
+  /* Peso normal da fonte */
+
+  color-scheme: light dark;
+  /* Suporta tema claro e escuro */
+  color: #213547;
+  /* Cor padrão do texto (azul escuro e neutro) */
+  background-color: #f4f6fa;
+  /* Cor de fundo clara, suave e neutra */
+
+  /* Melhora a renderização do texto para ficar mais nítido e legível */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilo para links */
+a {
+  font-weight: 500;
+  /* Fonte seminegrito para dar destaque */
+  color: #4bb392;
+  /* Cor verde suave para links */
+  text-decoration: none;
+  /* Remove sublinhado padrão */
+  transition: color 0.23s;
+  /* Transição suave na mudança de cor */
+}
+
+/* Cor do link muda para verde mais escuro quando o mouse passa encima */
+a:hover {
+  color: #275763;
+}
+
+/* Corpo da página */
+body {
+  margin: 0;
+  /* Remove margem padrão do navegador */
+  min-width: 320px;
+  /* Define largura mínima para mobiles */
+  min-height: 100vh;
+  /* Garante altura mínima de toda a tela */
+  background: #f4f6fa;
+  /* Define fundo neutro e suave */
+}
+
+/* Estilo básico para títulos h1 */
+h1 {
+  font-size: 3em;
+  /* Tamanho grande para destaque */
+  line-height: 1.1;
+  /* Espaçamento entre linhas junto ao texto */
+  margin: 0;
+  /* Remove margem padrão para controle total */
+}
+
+/* Estilo para botões */
+button {
+  border-radius: 8px;
+  /* Canto arredondado para suavizar */
+  border: 1px solid transparent;
+  /* Borda invisível por padrão */
+  padding: 0.6em 1.2em;
+  /* Espaçamento interno confortável */
+  font-size: 1em;
+  /* Tamanho padrão do texto */
+  font-weight: 500;
+  /* Fonte seminegrito */
+  font-family: inherit;
+  /* Usa a mesma fonte do elemento pai */
+  background-color: #4bb392;
+  /* Fundo verde suave */
+  color: #fff;
+  /* Texto branco para contraste */
+  cursor: pointer;
+  /* Mouse vira mãozinha para indicar clique */
+  transition: border-color 0.25s, background 0.19s;
+  /* Animações nas mudanças */
+}
+
+/* Efeito visual quando o botão é hover (mouse sobre ele) */
+button:hover {
+  border-color: #275763;
+  /* Borda verde mais escura */
+  background-color: #37977a;
+  /* Fundo verde escuro */
+}
+
+/* Estilo para foco no botão, acessibilidade para teclado */
+button:focus,
+button:focus-visible {
+  outline: 3px auto #275763;
+  /* Sombra de destaque ao redor */
+}
+
+/* Ajustes para tema claro do sistema operacional */
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: #f9f9f9;
+    /* Fundo um pouco mais claro */
+    color: #213547;
+    /* Mantém cor do texto */
+  }
+
+  /* Ajuste a cor dos links para harmonizar com fundo claro */
+  a {
+    color: #37977a;
+  }
+
+  a:hover {
+    color: #4bb392;
+  }
+
+  /* Botão muda cor para manter contraste */
+  button {
+    background-color: #37977a;
+    color: #fff;
+  }
+}
